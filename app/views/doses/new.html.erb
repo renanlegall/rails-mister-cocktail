@@ -1,2 +1,13 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<div class="container">
+  <h1><%= @cocktail.name %></h1>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <% if dose.persisted? %>
+        <li><%= dose.description %> of <%= dose.ingredient.name %></li>
+      <% end %>
+    <% end %>
+  </ul>
+
+  <h3>Add a dose</h3>
+  <%= render 'form' %>
+</div>
