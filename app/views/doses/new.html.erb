@@ -1,13 +1,15 @@
-<div class="container">
-  <h1><%= @cocktail.name %></h1>
-  <ul>
-    <% @cocktail.doses.each do |dose| %>
-      <% if dose.persisted? %>
-        <li><%= dose.description %> of <%= dose.ingredient.name %></li>
+<div class="wrapper-new">
+  <div class="container">
+    <h1><%= @cocktail.name %></h1>
+    <ul>
+      <% @cocktail.doses.each do |dose| %>
+        <% if dose.persisted? %>
+          <li><%= dose.description %> of <%= dose.ingredient.name %></li>
+        <% end %>
       <% end %>
-    <% end %>
-  </ul>
+    </ul>
 
-  <h3>Add a dose</h3>
-  <%= render 'form' %>
+    <h3>Ajoutez une dose !</h3>
+    <%= render 'form' %>
+  </div>
 </div>
