@@ -1,7 +1,12 @@
+ <div class="banner" style="background-image: url('<%= cl_image_path @cocktail.photo.path, height: 300, width: 400, crop: :fill %>');">
+          <div class="banner-content">
+            <h1><%= @cocktail.name %></h1>
+          </div>
+  </div>
+
  <div class="container">
   <div class="row">
-    <div class="col-md-6">
-      <h1><%= @cocktail.name %></h1>
+    <div class="col-lg-6">
       <% if @cocktail.doses.any? %>
         <ul class="list-unstyled">
           <% @cocktail.doses.each do |dose| %>
@@ -16,9 +21,7 @@
           <% end %>
           <% end %>
         </ul>
-        <% if @cocktail.photo? %>
-            <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
-        <% end %>
+        </div>
       <div>
       <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail)%>
       </div>
