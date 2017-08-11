@@ -1,10 +1,13 @@
 <div class="container">
   <h2> Liste des cocktails </h2>
 
-  <%= link_to 'Add a cocktail', new_cocktail_path %>
+  <%= link_to 'Add a cocktail', new_cocktail_path, class: 'btn btn-primary'%>
   <div class="row">
     <div class="col-md-3">
       <% @cocktails.each do |cocktail| %>
+        <% if cocktail.photo? %>
+              <%= cl_image_tag cocktail.photo.path, width: 200, height: 300, crop: :fill %>
+        <% end %>
           <%= link_to cocktail_path(cocktail) do %>
           <div class="card">
             <div class="cocktail-name">
