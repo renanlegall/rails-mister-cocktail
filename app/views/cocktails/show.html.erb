@@ -2,8 +2,9 @@
           <div class="banner-content text-center">
             <h1><%= @cocktail.name %></h1>
           </div>
-  </div>
+</div>
 
+<div class="wrapper-show">
  <div class="container">
   <div class="row">
     <div class="col-lg-6">
@@ -22,11 +23,21 @@
           <% end %>
         </ul>
         </div>
-      <div class="text-center">
-      <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-info'%>
 
-      <%= link_to 'List of cocktails', cocktails_path(@cocktail), class: 'btn btn-success'%>
+    <div class="col-xs-12 col-sm-4">
+      <div class="add text-center">
+      <%= link_to 'Ajouter une dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-info'%>
+      </div>
+
+      <div class="add text-center">
+
+      <%= link_to 'Liste des cocktails', cocktails_path(@cocktail), class: 'btn btn-success'%>
+
+      </div>
       </div>
     </div>
+
+    </div>
+  </div>
   </div>
 </div>

@@ -1,2 +1,30 @@
 // Import page-specific CSS files here.
 
+.wrapper {
+  padding: 5px 30px;
+  margin-bottom: 130px;
+}
+.card {
+  text-align: center;
+  padding-top: 15px;
+  margin: 20px;
+  height: 300px;
+}
+
+.card-image  {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+.card-name {
+  color: #23252B;
+  margin-top: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn .btn-primary {
+  margin-left: 10px;
+   margin-right: 10px;
+}
+

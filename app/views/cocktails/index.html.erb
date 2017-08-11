@@ -1,23 +1,26 @@
-<div class="container">
-  <h2> List of Cocktails </h2>
-  <div class="row text-center">
-    <%= link_to 'Create a new Cocktail', new_cocktail_path, class: 'btn btn-primary'%>
-  </div>
+<div class="wrapper">
+  <div class="container">
 
-  <div class="row cards">
+    <h1>Liste des cocktails</h1>
+
+    <div class="text-center">
+    <%= link_to 'Pimp ton cocktail !', new_cocktail_path(@cocktail), class: 'btn btn-primary'%>
+    </div>
+
+    <div class="row">
       <% @cocktails.each do |cocktail| %>
-      <div class="col-md-3 col-xs-6">
-        <% if cocktail.photo? %>
-              <%= cl_image_tag cocktail.photo.path, width: 200, height: 300, crop: :fill %>
-        <% end %>
-          <%= link_to cocktail_path(cocktail) do %>
+        <div class="col-xs-12 col-sm-3">
           <div class="card">
-            <div class="cocktail-name text-center">
-              <h4><%= cocktail.name %></h4>
-            </div>
+            <%= link_to cocktail_path(cocktail) do %>
+              <% if cocktail.photo? %>
+                <%= cl_image_tag cocktail.photo.path, width: 200, height: 300, crop: :fill, class: "card-image" %>
+              <% end %>
+              <p class="card-name"><%= cocktail.name %></p>
+            <% end %>
           </div>
-          <% end %>
         </div>
       <% end %>
+    </div>
   </div>
 </div>
+

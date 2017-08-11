@@ -13,34 +13,14 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+@import "pages/show";
+@import "pages/new";
 
-
-h2 {
+h1 {
+  color: #23252B;
+  font-weight: bold;
   text-align: center;
+  font-size: 40px;
+  margin-top: 45px;
 }
-
-.btn{
-
-}
-
-.banner {
-  color: white;
-  text-align: center;
-  height: 50vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.cards {
-  margin-top: 20px;
-}
-
-img{
-  border-radius: 3px;
-}
-
 
