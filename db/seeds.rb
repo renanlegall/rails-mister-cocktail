@@ -17,7 +17,4 @@ end
 p result
 
 
-url = "http://img.clubic.com/07791435-photo-playstation.jpg"
-product = Product.new(name: 'Playstation')
-product.save!
-product.photo_url = url
+

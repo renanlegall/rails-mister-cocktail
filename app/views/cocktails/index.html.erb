@@ -4,7 +4,7 @@
     <%= link_to 'Create a new Cocktail', new_cocktail_path, class: 'btn btn-primary'%>
   </div>
 
-  <div class="row">
+  <div class="row cards">
     <div class="col-md-3">
       <% @cocktails.each do |cocktail| %>
         <% if cocktail.photo? %>
@@ -12,7 +12,7 @@
         <% end %>
           <%= link_to cocktail_path(cocktail) do %>
           <div class="card">
-            <div class="cocktail-name">
+            <div class="cocktail-name text-center">
               <h4><%= cocktail.name %></h4>
             </div>
           </div>
